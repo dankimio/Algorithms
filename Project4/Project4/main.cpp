@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "sortings.h"
 
 using namespace std;
@@ -55,6 +56,7 @@ int main() {
         break;
     }
 
+	// Wait
     system("pause");
 }
 

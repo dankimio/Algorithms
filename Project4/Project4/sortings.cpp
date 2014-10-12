@@ -1,9 +1,10 @@
 //
-//  sortings.cpp
-//  Project4
-//
-//  Created by Danya Kim on 2014-10-11.
-//  Copyright (c) 2014 Danya Kim. All rights reserved.
+// Project 3
+// Name: Daniil Kim
+// Group: 201.1
+// Date: 4.10.2014
+// Task: Insertion sorts
+// IDE: Visual Studio 2013
 //
 
 #include "sortings.h"
@@ -36,13 +37,15 @@ void counting_sort(int a[], int n) {
         c[a[i]]++;
     }
 
-    for (int j = 0; j <= max; j++) {
+    for (int j = 1; j <= max; j++) {
         c[j] += c[j - 1];
     }
 
     for (int i = n - 1; i >= 0; i--) {
+        int temp = a[i];
+        int temp2 = c[temp];
         b[c[a[i]] - 1] = a[i];
-        c[a[i]] -= 1;
+        c[a[i]]--;
     }
 
     // Clean up
