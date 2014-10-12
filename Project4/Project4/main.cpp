@@ -54,6 +54,8 @@ int main() {
         cout << "Error" << endl;
         break;
     }
+
+    system("pause");
 }
 
 // Read integer input from the console
@@ -103,6 +105,9 @@ void read_arrays() {
             if (i != n - 1) {
                 cout << endl;
             }
+
+            // Clean up
+            input_file.close();
             delete[] array;
         }
     } else {
@@ -133,12 +138,11 @@ void sort_array(int array[], int n) {
     counting_sort(array_copy, n);
     results(array_copy, n);
 
-    //
-    //    // Binary sort
-    //    cout << "Binary sort: " << endl;
-    //    copy_array(array, array_copy, n);
-    //    //    binary_sort(array_copy, n);
-    //    results(array_copy, n);
+    // Binary sort
+    cout << "Radix 10 sort: " << endl;
+    copy_array(array, array_copy, n);
+    radix_sort10(array_copy, n);
+    results(array_copy, n);
 
     // Clean up
     delete[] array_copy;

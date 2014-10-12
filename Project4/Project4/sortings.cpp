@@ -10,6 +10,7 @@
 
 bool verify_array(int a[], int n);
 int max_value(int a[], int n);
+int max_length(int a[], int n);
 void copy_arrays(int array1[], int array2[], int n);
 
 void counting_sort(int a[], int n) {
@@ -51,8 +52,59 @@ void counting_sort(int a[], int n) {
 }
 
 void radix_sort10(int a[], int n) {
-    // TODO: write your radix sort here (10 number system, only positive
-    // numbers)
+    // Throw exception unless valid
+    if (!verify_array(a, n)) {
+        throw invalid_argument("Array elements should be less than zero.");
+    }
+
+    // Result array
+    int *b;
+    b = new int[n];
+
+    // Max of all elements
+    int max = max_length(a, n);
+
+    // Start from the right
+    int position = 1;
+
+    // Repeat max_length times
+    for (int i = 0; i < max; i++) {
+        // Numbers separated by current digit, base = 10
+        const int BASE = 10;
+        int digits[BASE];
+
+        // Initialize digits array
+        for (int j = 0; j < BASE; j++) {
+            digits[j] = 0;
+        }
+
+        for (int j = 0; j < n; j++) {
+            // Rightmost digit
+            int digit = a[j] / position % BASE;
+            // Increment corresponding digit in array
+            digits[digit]++;
+        }
+
+        // Update positions
+        for (int j = 0; j < BASE - 1; j++) {
+            digits[j + 1] += digits[j];
+        }
+
+        // Put digits back (into auxiliary array)
+        for (int j = n - 1; j >= 0; j--) {
+            // Rightmost digit
+            int digit = a[j] / position % BASE;
+            int new_position = --digits[digit];
+            b[new_position] = a[j];
+        }
+
+        // Copy auxiliary array to main array and then repeat
+        copy_arrays(b, a, n);
+        position *= 10;
+    }
+
+    // Clean up
+    delete[] b;
 }
 
 void radix_sort256(int a[], int n) {
@@ -107,6 +159,29 @@ int max_value(int a[], int n) {
             max = a[i];
         }
     }
+    return max;
+}
+
+// Get number length, i.e. max_length(123) = 3
+int max_length(int a[], int n) {
+    int max = 0;
+
+    for (int i = 0; i < n; i++) {
+        // Get copy of array element
+        int temp = a[i];
+        int length = 0;
+
+        // Divide until 0
+        while (temp > 0) {
+            length++;
+            temp /= 10;
+        }
+
+        if (length > max) {
+            max = length;
+        }
+    }
+
     return max;
 }
 
