@@ -42,8 +42,6 @@ void counting_sort(int a[], int n) {
     }
 
     for (int i = n - 1; i >= 0; i--) {
-        int temp = a[i];
-        int temp2 = c[temp];
         b[c[a[i]] - 1] = a[i];
         c[a[i]]--;
     }
@@ -113,6 +111,8 @@ void radix_sort10(int a[], int n) {
 void radix_sort256(int a[], int n) {
     // TODO: write your radix sort here (256 number system, only positive
     // numbers)
+
+    // Sorry, no radix 256 sort ;(
 }
 
 void array_generation(int result[], int n, int min, int max) {
