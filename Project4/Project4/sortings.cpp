@@ -9,7 +9,25 @@
 #include "sortings.h"
 
 void counting_sort(int a[], int n) {
-    // TODO: write your stable counting sort here (only positive numbers)
+    int *c;
+    c = new int[n];
+
+    // Fill array with 0s
+    for (int i = 0; i < n; i++) {
+        c[i] = 0;
+    }
+
+    for (int i = 0; i < n - 1; i++) {
+        c[a[i]] = c[a[i]] + 1;
+    }
+
+    for (int j = 0; j < n; j++) {
+        c[j] = c[j] + c[j - 1];
+    }
+
+    for (int i = n - 1; i >= 0; i--) {
+        cout << "Hello" << endl;
+    }
 }
 
 void radix_sort10(int a[], int n) {
