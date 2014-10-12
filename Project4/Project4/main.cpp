@@ -56,7 +56,7 @@ int main() {
         break;
     }
 
-	// Wait
+    // Wait
     system("pause");
 }
 
@@ -76,7 +76,7 @@ void read_input(int &param, string message) {
 void read_arrays() {
     string line;
     ifstream input_file;
-    input_file.open("test_proekt_3.txt");
+    input_file.open("test_proekt_4.txt");
 
     if (input_file.is_open()) {
         // Get arrays count
