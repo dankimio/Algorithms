@@ -1,11 +1,3 @@
-//
-//  sortings.cpp
-//  Project6
-//
-//  Created by Danya Kim on 2014-10-26.
-//  Copyright (c) 2014 Danya Kim. All rights reserved.
-//
-
 #include "sortings.h"
 
 void build_heap(int a[], int n);
@@ -37,7 +29,7 @@ void heapify(int a[], int n, int i) {
     int l = left(i);
     int r = right(i);
     int max = i;
-    
+
     if (l < n && a[i] < a[l]) {
         max = l;
     }

@@ -1,11 +1,3 @@
-//
-//  main.cpp
-//  Project6
-//
-//  Created by Danya Kim on 2014-10-26.
-//  Copyright (c) 2014 Danya Kim. All rights reserved.
-//
-
 /*
  Name + Surname: Daniil Kim
  Group: 201(1)
@@ -32,39 +24,39 @@ int main(int argc, const char *argv[]) {
     int choice;
     cout << "1. Generate an array\n2. Read from file" << endl;
     cin >> choice;
-    
+
     switch (choice) {
         case 1:
             // Generate an array
             int array_size;
             read_input(array_size, "Enter array size: ");
-            
+
             int min;
             read_input(min, "Enter minimum value: ");
-            
+
             int max;
             read_input(max, "Enter maximum value: ");
-            
+
             cout << endl;
-            
+
             int *array;
             array = new int[array_size];
-            
+
             array_generation(array, array_size, min, max);
             sort_array(array, array_size);
-            
+
             delete[] array;
             break;
         case 2:
             // Read arrays from file
             read_arrays();
             break;
-            
+
         default:
             cout << "Error" << endl;
             break;
     }
-    
+
     // Wait
     system("pause");
 }
@@ -169,7 +161,7 @@ void sort_array(int array[], int n) {
     copy_array(array, array_copy, n);
     heap_sort(array_copy, n);
     results(array_copy, n);
-    
+
     // Is sorted
     cout << "Is sorted: " << endl;
     if (is_sort(array_copy, n)) {
@@ -177,7 +169,7 @@ void sort_array(int array[], int n) {
     } else {
         cout << "No" << endl;
     }
-    
+
     // Write to file
     write_array(array, array_copy, n);
 

@@ -1,11 +1,3 @@
-//
-//  main.cpp
-//  Project5
-//
-//  Created by Danya Kim on 2014-10-16.
-//  Copyright (c) 2014 Danya Kim. All rights reserved.
-//
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -158,19 +150,19 @@ void write_array(int array_before[], int array_after[], int n) {
     ofstream output;
     output.open("output_proekt_5.txt");
     output << "Merge sort" << endl;
-    
+
     output << "Array before" << endl;
     for (int i = 0; i < n; i++) {
         output << array_before[i] << " ";
     }
     output << endl;
-    
+
     output << "Array after" << endl;
     for (int i = 0; i < n; i++) {
         output << array_after[i] << " ";
     }
     output << endl;
-    
+
     output.close();
 }
 

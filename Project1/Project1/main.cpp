@@ -1,11 +1,3 @@
-//
-//  main.cpp
-//  Project1
-//
-//  Created by Danya Kim on 2014-09-21.
-//  Copyright (c) 2014 Danya Kim. All rights reserved.
-//
-
 // Ким Даниил, группа 201
 // Проект 1
 // GNU++11, компилируется в Visual Studio

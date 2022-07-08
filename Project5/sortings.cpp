@@ -1,11 +1,3 @@
-//
-//  sortings.cpp
-//  Project5
-//
-//  Created by Danya Kim on 2014-10-16.
-//  Copyright (c) 2014 Danya Kim. All rights reserved.
-//
-
 #include "sortings.h"
 
 // Despite the encapsulation, decomposition was made here to make it generally

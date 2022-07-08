@@ -1,11 +1,3 @@
-//
-//  sortings.cpp
-//  Project2
-//
-//  Created by Danya Kim on 2014-09-28.
-//  Copyright (c) 2014 Danya Kim. All rights reserved.
-//
-
 #include "sortings.h"
 
 // Bubble sort

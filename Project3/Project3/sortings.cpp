@@ -1,11 +1,3 @@
-//
-//  sortings.cpp
-//  Project3
-//
-//  Created by Danya Kim on 2014-10-05.
-//  Copyright (c) 2014 Danya Kim. All rights reserved.
-//
-
 #include "sortings.h"
 
 // Sorting

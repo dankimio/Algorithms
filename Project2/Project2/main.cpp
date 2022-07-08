@@ -1,11 +1,3 @@
-//
-//  main.cpp
-//  Project2
-//
-//  Created by Danya Kim on 2014-09-28.
-//  Copyright (c) 2014 Danya Kim. All rights reserved.
-//
-
 // Name: Daniil Kim
 // Group: 201(1)
 // Date: 28.09.2014

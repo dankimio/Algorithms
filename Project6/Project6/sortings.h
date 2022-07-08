@@ -1,11 +1,3 @@
-//
-//  sortings.h
-//  Project6
-//
-//  Created by Danya Kim on 2014-10-26.
-//  Copyright (c) 2014 Danya Kim. All rights reserved.
-//
-
 #include <iostream>
 #include <ctime>
 

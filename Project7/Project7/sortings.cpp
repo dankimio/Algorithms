@@ -8,7 +8,7 @@
 
 // This is what you need to do this time.
 // Implement these functions and link their invokes together.
-// All (!) functions that are not described in header should 
+// All (!) functions that are not described in header should
 // be used in other functions!
 
 // You are welcome to add some functions but NOT TO CHANGE EXISTING
