@@ -1,7 +1,7 @@
-#include <iostream>
-#include <fstream>
-#include <string>
 #include "sortings.h"
+#include <fstream>
+#include <iostream>
+#include <string>
 
 /*
  Name + Surname: Daniil Kim
@@ -146,7 +146,7 @@ void copy_array(int array1[], int array2[], int n) {
 
 // Write to file
 void write_array(int array_before[], int array_after[], int n) {
-	cout << "OUTPUT!!!";
+    cout << "OUTPUT!!!";
     ofstream output;
     output.open("output_proekt_5.txt");
     output << "Merge sort" << endl;

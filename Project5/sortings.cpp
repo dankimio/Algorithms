@@ -78,7 +78,7 @@ void merge(int *arr, int from, int to) {
         arr[i] = temp[i];
     }
 
-	// delete [] temp;
+    // delete [] temp;
 }
 
 void array_generation(int result[], int n, int min, int max) {

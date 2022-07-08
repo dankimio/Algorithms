@@ -6,10 +6,10 @@
  IDE: Visual Studio
  */
 
-#include <iostream>
-#include <fstream>
-#include <string>
 #include "sortings.h"
+#include <fstream>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -26,35 +26,35 @@ int main(int argc, const char *argv[]) {
     cin >> choice;
 
     switch (choice) {
-        case 1:
-            // Generate an array
-            int array_size;
-            read_input(array_size, "Enter array size: ");
+    case 1:
+        // Generate an array
+        int array_size;
+        read_input(array_size, "Enter array size: ");
 
-            int min;
-            read_input(min, "Enter minimum value: ");
+        int min;
+        read_input(min, "Enter minimum value: ");
 
-            int max;
-            read_input(max, "Enter maximum value: ");
+        int max;
+        read_input(max, "Enter maximum value: ");
 
-            cout << endl;
+        cout << endl;
 
-            int *array;
-            array = new int[array_size];
+        int *array;
+        array = new int[array_size];
 
-            array_generation(array, array_size, min, max);
-            sort_array(array, array_size);
+        array_generation(array, array_size, min, max);
+        sort_array(array, array_size);
 
-            delete[] array;
-            break;
-        case 2:
-            // Read arrays from file
-            read_arrays();
-            break;
+        delete[] array;
+        break;
+    case 2:
+        // Read arrays from file
+        read_arrays();
+        break;
 
-        default:
-            cout << "Error" << endl;
-            break;
+    default:
+        cout << "Error" << endl;
+        break;
     }
 
     // Wait

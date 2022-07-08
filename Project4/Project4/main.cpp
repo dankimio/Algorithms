@@ -1,7 +1,7 @@
-#include <iostream>
-#include <fstream>
-#include <string>
 #include "sortings.h"
+#include <fstream>
+#include <iostream>
+#include <string>
 
 using namespace std;
 

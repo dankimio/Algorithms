@@ -43,14 +43,10 @@ void heapify(int a[], int n, int i) {
 }
 
 // Get left child
-int left(int i) {
-    return 2 * i + 2;
-}
+int left(int i) { return 2 * i + 2; }
 
 // Get right child
-int right(int i) {
-    return 2 * i + 1;
-}
+int right(int i) { return 2 * i + 1; }
 
 // Exchange elements at given indices
 void swap(int a[], int i, int j) {

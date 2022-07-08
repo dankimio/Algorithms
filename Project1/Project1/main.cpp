@@ -2,9 +2,9 @@
 // Проект 1
 // GNU++11, компилируется в Visual Studio
 
-#include <iostream>
 #include <bitset>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
